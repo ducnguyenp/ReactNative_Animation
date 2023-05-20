@@ -1,5 +1,5 @@
-import DraggableBottomSheet from "../commons/DraggableBottomSheet";
-import MyIcon from "../commons/MyIcon";
+import DraggableBottomSheet from "./DraggableBottomSheet";
+import MyIcon from "../../commons/MyIcon";
 import React, { useRef } from "react";
 import {
   Dimensions,
@@ -19,7 +19,7 @@ const LOWER_HEADER = 96;
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 const AnimatedText = Animated.createAnimatedComponent(Text);
 
-const Home = () => {
+const HeaderMomo = () => {
   const animatedValue = useRef(new Animated.Value(0)).current;
   const scrollViewRef = useRef<ScrollView>(null);
   const lastOffsetY = useRef(0);
@@ -294,4 +294,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HeaderMomo;

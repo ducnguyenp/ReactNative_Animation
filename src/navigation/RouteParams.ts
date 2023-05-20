@@ -1,13 +1,15 @@
 import { type NavigatorScreenParams, type ParamListBase } from '@react-navigation/native'
-export interface AuthStackParamList extends ParamListBase {
-  Home: undefined
-  Login: { id?: number } | undefined
+export interface AnimatedStack extends ParamListBase {
+  AnimatedScreen: undefined
+  HeaderMomo: undefined
+  DraggableBottomSheet: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {
-  HomeStack: NavigatorScreenParams<AuthStackParamList>
+  AnimatedStack: NavigatorScreenParams<AnimatedStack>
+  HomeScreen: undefined
 }
-export type AllScreenParamList = RootStackParamList & AuthStackParamList
+export type AllScreenParamList = RootStackParamList & AnimatedStack
 
 declare global {
   namespace ReactNavigation {
