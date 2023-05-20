@@ -1,3 +1,4 @@
+import DraggableBottomSheet from "../commons/DraggableBottomSheet";
 import MyIcon from "../commons/MyIcon";
 import React, { useRef } from "react";
 import {
@@ -36,7 +37,7 @@ const Home = () => {
       {
         translateX: animatedValue.interpolate({
           inputRange: [0, 25], // nghi la no chi can scroll 25px thi no se ket thuc viec di chuyen sang ben trai hoac phai
-          outputRange: [0, -100],
+          outputRange: [0, -100],  // sau khi keu du 25px thi no se dung toi vi tri -100
           extrapolate: "clamp",
         }),
       },
@@ -288,6 +289,7 @@ const Home = () => {
         <View className="h-24" />
         <View className="bg-white" style={{ height: WINDOW_HEIGHT * 2 }}></View>
       </ScrollView>
+      <DraggableBottomSheet />
     </View>
   );
 };
