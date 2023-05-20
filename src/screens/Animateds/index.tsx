@@ -17,6 +17,9 @@ const AnimatedScreen = () => {
         <TouchableOpacity onPress={() => goToScreen('DraggableBottomSheet')} className="py-2 px-3 bg-red-400 rounded-lg mb-2">
           <Text className="text-white text-base font-bold text-center">Draggable Bottom Sheet</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToScreen('ModalAnimation')} className="py-2 px-3 bg-red-500 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Modal Animation</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
