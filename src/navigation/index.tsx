@@ -1,34 +1,45 @@
-import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack'
-import React from 'react'
-import { RootStackParamList } from './RouteParams'
-import { NavigationContainer } from '@react-navigation/native'
-import Home from '../screens/Home'
+import {
+  CardStyleInterpolators,
+  createStackNavigator,
+} from "@react-navigation/stack";
+import React from "react";
+import { RootStackParamList } from "./RouteParams";
+import { NavigationContainer } from "@react-navigation/native";
+import AnimatedStack from "./AnimatedStack";
+import HomeScreen from "../screens/HomeScreen";
 
-const Stack = createStackNavigator<RootStackParamList>()
+const Stack = createStackNavigator<RootStackParamList>();
 
 const screenOptions = {
-    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-  }
-  
+  cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+};
 
 const AppNavigation = () => {
-  
   return (
     <>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName='HomeStack'
+          initialRouteName="HomeScreen"
           screenOptions={{
             ...screenOptions,
             headerShown: false,
-            animationEnabled: false,
+            animationEnabled: true,
           }}
         >
-          <Stack.Screen name='HomeStack' component={Home} options={{ gestureEnabled: false }} />
+          <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{ gestureEnabled: false }}
+          />
+          <Stack.Screen
+            name="AnimatedStack"
+            component={AnimatedStack}
+            options={{ gestureEnabled: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
-  )
-}
+  );
+};
 
-export default AppNavigation
+export default AppNavigation;
