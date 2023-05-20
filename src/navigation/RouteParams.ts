@@ -3,6 +3,7 @@ export interface AnimatedStack extends ParamListBase {
   AnimatedScreen: undefined
   HeaderMomo: undefined
   DraggableBottomSheet: undefined
+  ModalAnimation: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {
