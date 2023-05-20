@@ -20,6 +20,9 @@ const AnimatedScreen = () => {
         <TouchableOpacity onPress={() => goToScreen('ModalAnimation')} className="py-2 px-3 bg-red-500 rounded-lg mb-2">
           <Text className="text-white text-base font-bold text-center">Modal Animation</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToScreen('PhoneColorPicker')} className="py-2 px-3 bg-red-600 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Phone Color Picker</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
