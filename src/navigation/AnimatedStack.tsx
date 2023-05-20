@@ -8,6 +8,7 @@ import { RootStackParamList } from "navigation/RouteParams";
 import AnimatedScreen from "../screens/Animateds";
 import DraggableBottomSheet from "../screens/Animateds/DraggableBottomSheet";
 import ModalAnimation from "../screens/Animateds/ModalAnimation";
+import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -44,6 +45,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="ModalAnimation"
         component={ModalAnimation}
+        options={{ headerShown: false }}
+      />
+     <Stack.Screen
+        name="PhoneColorPicker"
+        component={PickPhoneColor}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
