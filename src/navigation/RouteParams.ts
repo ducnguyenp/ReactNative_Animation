@@ -5,6 +5,7 @@ export interface AnimatedStack extends ParamListBase {
   DraggableBottomSheet: undefined
   ModalAnimation: undefined
   PhoneColorPicker: undefined
+  AnimatedExample: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {

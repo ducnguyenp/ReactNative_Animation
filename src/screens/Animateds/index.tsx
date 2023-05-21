@@ -11,6 +11,9 @@ const AnimatedScreen = () => {
   return (
     <View className="flex-1 bg-white flex justify-center items-center">
       <View>
+      <TouchableOpacity onPress={() => goToScreen('AnimatedExample')} className="py-2 px-3 bg-red-200 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Animated Example</Text>
+        </TouchableOpacity>
         <TouchableOpacity onPress={() => goToScreen('HeaderMomo')} className="py-2 px-3 bg-red-300 rounded-lg mb-2">
           <Text className="text-white text-base font-bold text-center">Header MOMO</Text>
         </TouchableOpacity>
