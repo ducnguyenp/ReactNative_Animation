@@ -9,6 +9,7 @@ import AnimatedScreen from "../screens/Animateds";
 import DraggableBottomSheet from "../screens/Animateds/DraggableBottomSheet";
 import ModalAnimation from "../screens/Animateds/ModalAnimation";
 import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
+import AnimatedExample from "../screens/Animateds/AnimatedExample";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -47,9 +48,14 @@ const AnimatedStack = () => {
         component={ModalAnimation}
         options={{ headerShown: false }}
       />
-     <Stack.Screen
+      <Stack.Screen
         name="PhoneColorPicker"
         component={PickPhoneColor}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="AnimatedExample"
+        component={AnimatedExample}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
