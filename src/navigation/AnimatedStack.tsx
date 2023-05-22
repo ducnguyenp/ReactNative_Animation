@@ -10,6 +10,7 @@ import DraggableBottomSheet from "../screens/Animateds/DraggableBottomSheet";
 import ModalAnimation from "../screens/Animateds/ModalAnimation";
 import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
 import AnimatedExample from "../screens/Animateds/AnimatedExample";
+import DoubleTapMessage from "../screens/Animateds/DoubleTapMessage";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -56,6 +57,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="AnimatedExample"
         component={AnimatedExample}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DoubleTapMessage"
+        component={DoubleTapMessage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

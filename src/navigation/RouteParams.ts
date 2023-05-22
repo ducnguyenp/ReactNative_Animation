@@ -6,6 +6,7 @@ export interface AnimatedStack extends ParamListBase {
   ModalAnimation: undefined
   PhoneColorPicker: undefined
   AnimatedExample: undefined
+  DoubleTapMessage: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {

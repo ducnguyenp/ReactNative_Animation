@@ -54,6 +54,44 @@ const AnimatedExample = () => {
     })
   }
 
+  const blockView = {
+    transform: [
+      {
+        scaleY: animatedValue3.interpolate({
+          inputRange: [0, 50],
+          outputRange: [1, 0.7],
+          extrapolate: "clamp",
+        }),
+      },
+      {
+        scaleX: animatedValue3.interpolate({
+          inputRange: [0, 50],
+          outputRange: [1, 0.7],
+          extrapolate: "clamp",
+        }),
+      },
+      {
+        translateY: animatedValue3.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, -48],
+          extrapolate: "clamp",
+        }),
+      },
+      {
+        translateX: animatedValue3.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, 20],
+          extrapolate: "clamp",
+        }),
+      },
+    ]
+    // opacity: animatedValue3.interpolate({
+    //   inputRange: [0, 50],
+    //   outputRange: [1, 0],
+    //   extrapolate: "clamp",
+    // }),
+  }
+
   return (
     <>
       <Animated.View
@@ -92,7 +130,7 @@ const AnimatedExample = () => {
       </TouchableOpacity>
 
       <Animated.View className="bg-sky-300 h-10 w-full mt-3" style={opacityView}></Animated.View>
-
+      <Animated.View className="w-6 h-6 bg-yellow-600 rounded-md" style={blockView} />
       <ScrollView
         scrollEventThrottle={16}
         onScroll={(e) => animatedValue3.setValue(e.nativeEvent.contentOffset.y)}
