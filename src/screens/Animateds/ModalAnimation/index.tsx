@@ -28,9 +28,11 @@ const ModalAnimation = () => {
         isVisible={open}
         onClose={() => setOpen(false)}
       >
-        <ScrollView>
-          <Text>Hello</Text>
-        </ScrollView>
+        {open ? (
+          <ScrollView>
+            <Text style={{ paddingHorizontal: 16 }}>Content</Text>
+          </ScrollView>
+        ) : null}
       </ModalComponent>
     </>
   );
