@@ -29,6 +29,9 @@ const AnimatedScreen = () => {
         <TouchableOpacity onPress={() => goToScreen('DoubleTapMessage')} className="py-2 px-3 bg-red-700 rounded-lg mb-2">
           <Text className="text-white text-base font-bold text-center">Double Tap Message</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToScreen('WavingPhone')} className="py-2 px-3 bg-red-800 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Waving phone</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -11,6 +11,7 @@ import ModalAnimation from "../screens/Animateds/ModalAnimation";
 import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
 import AnimatedExample from "../screens/Animateds/AnimatedExample";
 import DoubleTapMessage from "../screens/Animateds/DoubleTapMessage";
+import WavingPhone from "../screens/Animateds/WavingPhone";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -62,6 +63,11 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="DoubleTapMessage"
         component={DoubleTapMessage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="WavingPhone"
+        component={WavingPhone}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
