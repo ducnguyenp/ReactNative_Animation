@@ -1,49 +1,61 @@
-import React, { useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Animated, {
-  SlideInDown,
+  useSharedValue,
   useAnimatedStyle,
-  withDelay,
+  withSpring,
   withRepeat,
-  withSequence,
   withTiming,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
+
+const SIZE = 100.0;
+
+const handleRotation = (progress: Animated.SharedValue<number>) => {
+  'worklet';
+
+  return `${progress.value * 2 * Math.PI}rad`;
+};
 
 const Begin = () => {
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      {
-        translateY: withRepeat(
-          withSequence(
-            withTiming(-100, { duration: 300 }),
-            withDelay(1500, withTiming(-50, { duration: 300 })),
-            withTiming(-100, { duration: 300 })
-          ),
-          -1
-        ),
-      },
-    ],
-    opacity: withRepeat(
-      withSequence(
-        withDelay(1500, withTiming(0)),
-        withDelay(300, withTiming(1)),
-      ),
-      -1
-    ),
-  }));
+  const progress = useSharedValue(1);
+  const scale = useSharedValue(2);
+
+  const reanimatedStyle = useAnimatedStyle(() => {
+    return {
+      opacity: progress.value,
+      // borderRadius: (progress.value * SIZE) / 2,
+      transform: [{ scale: scale.value }],
+      // transform: [{ scale: scale.value }, { rotate: handleRotation(progress) }],
+    };
+  }, []);
+
+  useEffect(() => {
+    // progress.value = withRepeat(withSpring(0.5), -1, true);
+    progress.value = withRepeat(withTiming(0, { duration: 5000 }), -1, true);
+    scale.value = withRepeat(withSpring(1), -1, true);
+  }, []);
 
   return (
-    <View className="flex-1 flex justify-center items-center bg-white">
+    <View style={styles.container}>
+      <TouchableOpacity><Text>Helloo</Text></TouchableOpacity>
       <Animated.View
-        className="w-24 h-24 bg-orange-900 rounded-full"
-        style={animatedStyle}
-      />
-      <Animated.View
-        entering={SlideInDown}
-        className="w-24 h-24 mt-10 bg-orange-400 rounded-full"
+        style={[
+          { height: SIZE, width: SIZE, backgroundColor: 'blue' },
+          reanimatedStyle,
+        ]}
       />
     </View>
   );
-};
+}
 
-export default Begin;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default Begin
