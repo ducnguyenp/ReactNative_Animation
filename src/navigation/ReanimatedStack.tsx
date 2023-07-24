@@ -6,6 +6,12 @@ import {
 import { RootStackParamList } from "navigation/RouteParams";
 import ReanimatedScreen from "../screens/Reanimated";
 import Begin from "../screens/Reanimated/Begin";
+import RippleEffect from "../screens/Reanimated/RippleEffect";
+import MenuPerspective from "../screens/Reanimated/MenuPerspective";
+import SliderCounter from "../screens/Reanimated/SliderCounter";
+import ClockLoader from "../screens/Reanimated/ClockLoader";
+import LayoutAnimation from "../screens/Reanimated/LayoutAnimation";
+import FlatListAnimated from "../screens/Reanimated/FlatListAnimated";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -32,6 +38,36 @@ const ReanimatedStack = () => {
       <Stack.Screen
         name="Begin"
         component={Begin}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RippleEffect"
+        component={RippleEffect}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MenuPerspective"
+        component={MenuPerspective}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SliderCounter"
+        component={SliderCounter}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ClockLoader"
+        component={ClockLoader}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LayoutAnimation"
+        component={LayoutAnimation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FlatListAnimated"
+        component={FlatListAnimated}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
