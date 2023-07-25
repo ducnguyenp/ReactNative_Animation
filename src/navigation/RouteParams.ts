@@ -9,12 +9,17 @@ export interface AnimatedStack extends ParamListBase {
   DoubleTapMessage: undefined
 }
 
+export interface ReanimatedStack extends ParamListBase {
+  Begin: undefined
+}
+
 export interface ReactHookStack extends ParamListBase {
   HigherOrderComponent: undefined
 }
 
 export interface RootStackParamList extends ParamListBase {
   AnimatedStack: NavigatorScreenParams<AnimatedStack>
+  ReanimatedStack: NavigatorScreenParams<ReanimatedStack>
   HomeScreen: undefined
 }
 export type AllScreenParamList = RootStackParamList & AnimatedStack & ReactHookStack

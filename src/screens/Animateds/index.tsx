@@ -32,6 +32,12 @@ const AnimatedScreen = () => {
         <TouchableOpacity onPress={() => goToScreen('WavingPhone')} className="py-2 px-3 bg-red-800 rounded-lg mb-2">
           <Text className="text-white text-base font-bold text-center">Waving phone</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToScreen('ToggleButton')} className="py-2 px-3 bg-red-900 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Toggle Button</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToScreen('BeginReanimated')} className="py-2 px-3 bg-orange-900 rounded-lg mb-2">
+          <Text className="text-white text-base font-bold text-center">Begin Reanimated</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
