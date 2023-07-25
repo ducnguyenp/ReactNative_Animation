@@ -63,7 +63,23 @@ const ReanimatedScreen = () => {
         className="py-2 px-3 bg-purple-700 rounded-lg mb-2"
       >
         <Text className="text-white text-base font-bold text-center">
-        FlatList Animated
+          FlatList Animated
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => goToScreen("TabNavigation")}
+        className="py-2 px-3 bg-purple-800 rounded-lg mb-2"
+      >
+        <Text className="text-white text-base font-bold text-center">
+          TabNavigation
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => goToScreen("AnimatedList")}
+        className="py-2 px-3 bg-purple-900 rounded-lg mb-2"
+      >
+        <Text className="text-white text-base font-bold text-center">
+        AnimatedList
         </Text>
       </TouchableOpacity>
     </View>
