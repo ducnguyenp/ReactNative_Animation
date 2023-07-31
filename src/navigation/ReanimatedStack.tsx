@@ -1,25 +1,26 @@
-import React from "react";
-import {
-  CardStyleInterpolators,
-  createStackNavigator,
-} from "@react-navigation/stack";
-import { RootStackParamList } from "navigation/RouteParams";
-import ReanimatedScreen from "../screens/Reanimated";
-import Begin from "../screens/Reanimated/Begin";
-import RippleEffect from "../screens/Reanimated/RippleEffect";
-import MenuPerspective from "../screens/Reanimated/MenuPerspective";
-import SliderCounter from "../screens/Reanimated/SliderCounter";
-import ClockLoader from "../screens/Reanimated/ClockLoader";
-import LayoutAnimation from "../screens/Reanimated/LayoutAnimation";
-import FlatListAnimated from "../screens/Reanimated/FlatListAnimated";
-import TabNavigation from "../screens/Reanimated/TabNavigation";
-import AnimatedList from "../screens/Reanimated/AnimatedList";
+import React from 'react'
+import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack'
+import { RootStackParamList } from 'navigation/RouteParams'
+import ReanimatedScreen from '../screens/Reanimated'
+import Begin from '../screens/Reanimated/Begin'
+import RippleEffect from '../screens/Reanimated/RippleEffect'
+import MenuPerspective from '../screens/Reanimated/MenuPerspective'
+import SliderCounter from '../screens/Reanimated/SliderCounter'
+import ClockLoader from '../screens/Reanimated/ClockLoader'
+import LayoutAnimation from '../screens/Reanimated/LayoutAnimation'
+import FlatListAnimated from '../screens/Reanimated/FlatListAnimated'
+import TabNavigation from '../screens/Reanimated/TabNavigation'
+import AnimatedList from '../screens/Reanimated/AnimatedList'
+import InputAnimated from '../screens/Reanimated/InputAnimated'
+import According from '../screens/Reanimated/According'
+import LoginForm from '../screens/Reanimated/LoginForm'
+import DrawerAnimation from '../screens/Reanimated/DrawerAnimation'
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>()
 
 const screenOptions = {
   cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-};
+}
 
 const ReanimatedStack = () => {
   return (
@@ -28,7 +29,7 @@ const ReanimatedStack = () => {
       screenOptions={{
         ...screenOptions,
         headerShown: true,
-        headerTitleAlign: "center",
+        headerTitleAlign: 'center',
         headerBackTitleVisible: true,
       }}
     >
@@ -37,16 +38,8 @@ const ReanimatedStack = () => {
         component={ReanimatedScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="Begin"
-        component={Begin}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="RippleEffect"
-        component={RippleEffect}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="Begin" component={Begin} options={{ headerShown: false }} />
+      <Stack.Screen name="RippleEffect" component={RippleEffect} options={{ headerShown: false }} />
       <Stack.Screen
         name="MenuPerspective"
         component={MenuPerspective}
@@ -57,11 +50,7 @@ const ReanimatedStack = () => {
         component={SliderCounter}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="ClockLoader"
-        component={ClockLoader}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="ClockLoader" component={ClockLoader} options={{ headerShown: false }} />
       <Stack.Screen
         name="LayoutAnimation"
         component={LayoutAnimation}
@@ -77,13 +66,21 @@ const ReanimatedStack = () => {
         component={TabNavigation}
         options={{ headerShown: false }}
       />
+      <Stack.Screen name="AnimatedList" component={AnimatedList} options={{ headerShown: false }} />
       <Stack.Screen
-        name="AnimatedList"
-        component={AnimatedList}
+        name="InputAnimated"
+        component={InputAnimated}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="According" component={According} options={{ headerShown: false }} />
+      <Stack.Screen name="LoginForm" component={LoginForm} options={{ headerShown: false }} />
+      <Stack.Screen
+        name="DrawerAnimation"
+        component={DrawerAnimation}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
-  );
-};
+  )
+}
 
-export default ReanimatedStack;
+export default ReanimatedStack

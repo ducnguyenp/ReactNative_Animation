@@ -12,11 +12,11 @@ type Props = {
 const Card: React.FC<Props> = ({ id, title, description, posterUrl }) => {
   return (
     <Animated.View
-      style={[style.shadow]}
+      style={[styles.shadow]}
       layout={Layout.stiffness(1)}
       entering={SlideInLeft.duration(500)}
       exiting={SlideOutRight.duration(500)}
-      className="border border-gray-200 rounded-2xl p-4 my-8"
+      className="border border-gray-200 rounded-2xl p-4 my-8 bg-white"
     >
       <Text className="text-3xl font-extrabold text-gray-700 mb-2">
         {title}
@@ -30,9 +30,8 @@ const Card: React.FC<Props> = ({ id, title, description, posterUrl }) => {
   );
 };
 
-const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   shadow: {
-    backgroundColor: "white",
     elevation: 8,
     shadowColor: "gray",
     shadowRadius: 6,
