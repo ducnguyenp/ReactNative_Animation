@@ -12,7 +12,6 @@ import PickPhoneColor from "../screens/Animateds/PhoneColorPicker";
 import AnimatedExample from "../screens/Animateds/AnimatedExample";
 import DoubleTapMessage from "../screens/Animateds/DoubleTapMessage";
 import WavingPhone from "../screens/Animateds/WavingPhone";
-import ToggleButton from "../screens/Animateds/ToggleButton";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -69,11 +68,6 @@ const AnimatedStack = () => {
       <Stack.Screen
         name="WavingPhone"
         component={WavingPhone}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="ToggleButton"
-        component={ToggleButton}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
