@@ -19,7 +19,7 @@ const data: Item[] = [
   },
   {
     id: 3,
-    image: require("../Spotify/Image/gaga.png"),
+    image: require("../Spotify/Image/demi.jpg"),
   },
 ];
 

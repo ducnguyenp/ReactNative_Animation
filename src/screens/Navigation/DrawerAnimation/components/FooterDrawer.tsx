@@ -23,10 +23,10 @@ const FooterDrawer: React.FC<Props> = ({onOpenProfile, drawerProgress}) => {
         className="flex-row items-center bg-white rounded-xl mx-2 p-3 mb-2"
         style={profileViewStyle}
       >
-        <Image
+        {/* <Image
           className="mx-2 w-14 h-14 rounded-full bg-white"
-          source={require('../assets/images/avatar.png')}
-        />
+          source={require('../assets/images/avatar.jpg')}
+        /> */}
         <View>
           <Text className="text-2xl text-gray-800 font-medium">Kelsey Van</Text>
           <Text className="text-gray-400">Software Engineer</Text>

@@ -1,42 +1,30 @@
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  FlatList,
-  Dimensions,
-  Platform,
-} from "react-native";
-import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { themeColors } from "../..";
-import MyIcon from "@app/commons/MyIcon";
-import { categories, coffeeItems } from "../../data";
-import Categories from "./Categories";
-import CoffeeCard from "./CoffeeCard";
-import { ScrollView } from "react-native-gesture-handler";
-import CoffeeList from "./CoffeeList";
+import { View, Text, TouchableOpacity, TextInput, Dimensions, Platform } from 'react-native'
+import React, { useState } from 'react'
+import { themeColors } from '../..'
+import MyIcon from '@app/commons/MyIcon'
+import Categories from './Categories'
+import { ScrollView } from 'react-native-gesture-handler'
+import CoffeeList from './CoffeeList'
+import { Image } from 'react-native'
 
-const { width, height } = Dimensions.get("window");
-const ios = Platform.OS == "ios";
+const { height } = Dimensions.get('window')
 const HomeScreen = () => {
-  const [activeCategory, setActiveCategory] = useState(1);
+  const [activeCategory, setActiveCategory] = useState(1)
 
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="flex-1 relative">
-        <Image
-          source={require("../../assets/images/beansBackground1.png")}
+        {/* <Image
+          source={require('../../assets/images/beansBackground1.jpg')}
           style={{ height: height * 0.24 }}
           className="w-full absolute -top-5 opacity-10"
-        />
+        /> */}
         <View className="flex-1">
           <View className="mx-4 flex-row justify-between items-center">
-            <Image
-              source={require("../../assets/images/avatar.png")}
+            {/* <Image
+              source={require("../../assets/images/avatar.jpg")}
               className="h-9 w-9 rounded-full"
-            />
+            /> */}
             <View className="flex-row items-center space-x-2">
               <MyIcon size={25} color={themeColors.bgLight} name="map-marker" />
               <Text className="font-semibold text-base">New York, NYC</Text>
@@ -72,4 +60,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HomeScreen

@@ -29,7 +29,7 @@ export const Catagories: Category[] = [
   {
     id: 4,
     title: "Rock & Roll",
-    image: require("./Image/gaga.png"),
+    image: require("./Image/demi.jpg"),
     icon: "",
   },
   {
@@ -41,7 +41,7 @@ export const Catagories: Category[] = [
   {
     id: 6,
     title: "Rock & Roll",
-    image: require("./Image/mariah.png"),
+    image: require("./Image/marilyn.jpg"),
     icon: "",
   },
 ];

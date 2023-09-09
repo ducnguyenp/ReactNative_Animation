@@ -21,10 +21,10 @@ const Header = () => {
     <View>
       <View className="flex-row items-center justify-between">
         <View className="flex-row items-center">
-          <Image
+          {/* <Image
             className="w-12 h-12 rounded-full object-cover"
-            source={require("../../Image/account.png")}
-          />
+            source={require("../../Image/account.jpg")}
+          /> */}
           <Text className="text-white font-bold text-2xl ml-4">
             {welcomeText}
           </Text>
